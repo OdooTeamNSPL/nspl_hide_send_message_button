@@ -1,0 +1,40 @@
+<!--<?xml version="1.0" encoding="utf-8" ?>-->
+<!--<odoo>-->
+<!--    <template id="mail.chatter_inherit_hide_send_message" inherit_id="mail.mail_chatter_thread">-->
+<!--        <xpath expr="//div[contains(@class, 'o_mail_chatter_buttons')]" position="attributes">-->
+<!--            <attribute name="t-attf-class">-->
+<!--                o_mail_chatter_buttons-->
+<!--                <t t-if="user.hide_send_message_button"> d-none </t>-->
+<!--            </attribute>-->
+<!--        </xpath>-->
+<!--    </template>-->
+
+<!--    <template id="assets_backend" inherit_id="web.assets_backend" name="Hide Send Message Assets" priority="1000">-->
+<!--        <xpath expr="." position="inside">-->
+<!--            <script type="text/javascript">-->
+<!--                odoo.define('nspl_hide_send_message_button.chatter_patch', function (require) {-->
+<!--                    "use strict";-->
+<!--                    const Chatter = require('mail.Chatter');-->
+<!--                    const session = require('web.session');-->
+
+<!--                    Chatter.include({-->
+<!--                        _renderSendMessageButton() {-->
+<!--                            if (session.user_context.hide_send_message_button) {-->
+<!--                                return;-->
+<!--                            }-->
+<!--                            this._super.apply(this, arguments);-->
+<!--                        },-->
+<!--                    });-->
+<!--                });-->
+<!--            </script>-->
+<!--        </xpath>-->
+<!--    </template>-->
+
+<!--</odoo>-->
+<templates id="template" xml:space="preserve">
+    <t t-inherit="mail.Chatter" t-inherit-mode="extension">
+        <xpath expr="//button[contains(@class, 'o-mail-Chatter-sendMessage')]" position="attributes">
+            <attribute name="t-if">!hideSendMessage</attribute>
+        </xpath>
+    </t>
+</templates>
