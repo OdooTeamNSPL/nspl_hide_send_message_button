@@ -36,6 +36,7 @@ Useful in regulated environments or teams with limited communication permissions
             'nspl_hide_send_message_button/static/src/xml/mail_thread_inherit.xml',
         ],
     },
+    'images': ['static/description/img/banner.png'],
     'installable': True,
     'application': False,
     'auto_install': False,
