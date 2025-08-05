@@ -1,0 +1,1 @@
+# nspl_hide_send_message_button
