@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Hide Send Message Button',
-    'version': '18.0',
+    'version': '19.0.1',
     'summary': "Hide the chatter Send Message button for selected users",
     'description': """
 This module adds a user-specific setting to hide the 'Send Message' button in the Odoo chatter for better control and cleaner UI.

@@ -3,7 +3,6 @@
     <data noupdate="0">
         <record id="group_hide_send_message" model="res.groups">
             <field name="name">Hide Send Message Button</field>
-            <field name="category_id" ref="base.module_category_hidden"/>
         </record>
     </data>
 </odoo>
